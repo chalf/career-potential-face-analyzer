@@ -29,17 +29,36 @@ cd career-potential-face-analyzer
 cd Image-BasedTraitAssessment
 ```
 
-### 3. Install Required Libraries
+### 3. Environment
+First, install cmake, and python 3.12.
+Then open the project.
+*Note: open the Image-Based Trait Assessment project folder in the IDE, not the repository folder*
+```
+python -m venv venv
+```
+
+**Windows**
+```
+venv\Scripts\activate 
+```
+
+**MacOS**
+```
+source venv/bin/activate
+```
+
+
+### 4. Install Required Libraries
 ```
 pip install -r requirements.txt
 ```
 
-### 4. Run Flask Server
+### 5. Run Flask Server
 ```
 python index.py
 ```
 
-### 5. Access the Application
+### 6. Access the Application
 Open your browser and go to: http://127.0.0.1:5000
 
 ---
