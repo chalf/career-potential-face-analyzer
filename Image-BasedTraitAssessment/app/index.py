@@ -42,6 +42,9 @@ def detect_faces():
     return jsonify(data)
 
 
+@app.route('/', methods=['GET'])
+def index():
+    return '<h1>Welcome</h1>'
 
 
 if __name__ == '__main__':

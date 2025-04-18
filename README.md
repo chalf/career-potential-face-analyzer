@@ -10,7 +10,7 @@ Facial analysis for speculative personality and career path insights. Note: Lack
 
 ## Technologies Used:
 - Python (Flask framework)
-- OpenCV, mediapine for image processing
+- OpenCV, mediapine, dlib for image processing
 - Supporting libraries such as numpy and pandas
 
 ---
@@ -19,7 +19,7 @@ Facial analysis for speculative personality and career path insights. Note: Lack
 
 ### 1. System Requirements
 Ensure you have:
-- Python 3.x
+- Python 3.12
 - pip (Python Package Installer)
 
 ### 2. Clone Repository
@@ -31,10 +31,17 @@ cd Image-BasedTraitAssessment
 
 ### 3. Environment
 First, install cmake, and python 3.12.
+
 Then open the project.
-*Note: open the Image-Based Trait Assessment project folder in the IDE, not the repository folder*
+
+*`Note`: open the Image-Based Trait Assessment project folder in the IDE, not the repository folder*
 ```
 python -m venv venv
+```
+
+**For Ubuntu**
+```
+python3.12 -m venv venv
 ```
 
 **Windows**
@@ -42,13 +49,28 @@ python -m venv venv
 venv\Scripts\activate 
 ```
 
-**MacOS**
+**MacOS or Ubuntu**
 ```
 source venv/bin/activate
 ```
 
 
 ### 4. Install Required Libraries
+```
+pip install -r requirements.txt
+```
+
+**For Ubuntu**
+```
+python3.12 -m pip install setuptools
+```
+```
+git clone https://github.com/davisking/dlib.git
+cd dlib
+python3.12 setup.py install
+```
+
+Then, go back to the project folder, activate the environment and run:
 ```
 pip install -r requirements.txt
 ```
