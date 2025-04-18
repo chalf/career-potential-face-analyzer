@@ -12,7 +12,7 @@ mp_face_mesh = mp.solutions.face_mesh
 face_mesh = mp_face_mesh.FaceMesh(static_image_mode=True, max_num_faces=1)
 
 
-@app.route('/analyze-faces', methods=['POST'])
+@app.route('/analyze-faces/', methods=['POST'])
 def detect_faces():
     if 'image' not in request.files:
         return jsonify({'error': 'No image uploaded'}), 400

@@ -64,21 +64,33 @@ pip install -r requirements.txt
 ```
 python3.12 -m pip install setuptools
 ```
+Install dlib library separately to avoid errors:
 ```
 git clone https://github.com/davisking/dlib.git
 cd dlib
 python3.12 setup.py install
 ```
-
-Then, go back to the project folder, activate the environment and run:
 ```
 pip install -r requirements.txt
 ```
 
 ### 5. Run Flask Server
 ```
-python index.py
+python app/index.py
 ```
+
+**For Ubuntu**
+```
+sudo apt update
+sudo apt install libffi-dev
+```
+libffi is the library that Python uses to build _ctypes. Python uses the _ctypes module to support calling functions from C dynamic libraries, and _ctypes depends on libffi to do this. 
+
+After installation is complete, check:
+```
+python3.12 -c "import _ctypes"
+```
+If there is no error, it is ok.
 
 ### 6. Access the Application
 Open your browser and go to: http://127.0.0.1:5000
