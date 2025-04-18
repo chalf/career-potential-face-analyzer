@@ -92,6 +92,11 @@ python3.12 -c "import _ctypes"
 ```
 If there is no error, it is ok.
 
+```
+export PYTHONPATH=/var/www/Image-BasedTraitAssessment
+python app/index.py
+```
+
 ### 6. Access the Application
 Open your browser and go to: http://127.0.0.1:5000
 
