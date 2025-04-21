@@ -56,7 +56,10 @@ source venv/bin/activate
 
 
 ### 4. Install Required Libraries
+**For Windows**
+![Install Desktop Development with C++](images/buildtool.bmp)
 ```
+pip install dlib-19.24.99-cp312-cp312-win_amd64.whl
 pip install -r requirements.txt
 ```
 

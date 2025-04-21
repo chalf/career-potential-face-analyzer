@@ -31,6 +31,7 @@ def analyze_personality(landmarks, image_width, image_height):
         "mouth_ratio": round(mouth_ratio, 3),
         "nose_ratio": round(nose_ratio, 3),
         "chin_ratio": round(chin_ratio, 3),
+        'summary': data['summary'],
         "personality": list(set(data['personality'])),
         "suggested_careers": list(set(data['careers']))
     }
@@ -114,9 +115,22 @@ def rule_based_classification(face_ratio, eye_ratio, mouth_ratio, nose_ratio, ch
         personality += ["Cứng rắn", "Kiên cường", "Bản lĩnh"]
         careers += ["Lãnh đạo nhóm", "Founder", "Chuyên gia đàm phán"]
 
+    # ---- Tạo summary ----
+    top_traits = personality[:3]
+    top_careers = careers[:3]
+
+    # Viết thành một đoạn văn ngắn
+    summary = (
+        f"Dựa vào tỉ lệ khuôn mặt, bạn có những tính cách nổi bật như "
+        f"{', '.join(top_traits[:-1])} và {top_traits[-1]}. "
+        f"Những nghề nghiệp phù hợp với phong thái này gồm {', '.join(top_careers[:-1])} và {top_careers[-1]}. "
+        "Hãy cân nhắc thử sức ở các lĩnh vực này!"
+    )
+
     return {
         'personality': personality,
-        'careers': careers
+        'careers': careers,
+        'summary': summary,
     }
 
 
